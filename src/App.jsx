@@ -293,7 +293,7 @@ function App() {
   <div className="flex flex-col items-center lg:flex-row lg:justify-center lg:w-1/2 rounded-3xl border-gray-500 border bg-white mt-8 mb-8 lg:mx-auto p-2 ml-4 mr-4">
     <div className="flex items-center justify-center gap-2 m-4">
       <img
-        src="/src/assets/email.png"
+        src="email.png"
         alt="Email icon"
         className="cursor-pointer h-8"
       />
@@ -301,7 +301,7 @@ function App() {
     </div>
     <div className="flex items-center justify-center gap-2 m-4">
       <img
-        src="/src/assets/linkedin.png"
+        src="linkedin.png"
         alt="LinkedIn icon"
         className="cursor-pointer h-8"
       />
