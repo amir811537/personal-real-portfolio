@@ -65,9 +65,9 @@ function App() {
       <button className='btn btn-outline' onClick={handleDownload}>Download Cv</button>
       <button className='btn' onClick={() => window.location.href = '#contact'}>Contact Info</button>
     </div>
-    <div className='flex gap-7 ml-12 justify-center lg:justify-center mt-9' id='social_container'>
+    <div className='flex gap-7 lg:ml-12 justify-center lg:justify-center mt-9' id='social_container'>
       <img className='h-8 w-8 cursor-pointer' src="linkedin.png" alt="my LinkedIn profile" onClick={() => window.location.href = 'https://www.linkedin.com/in/aamir-hossain-a37911274'} />
-      <img className='h-8 w-8 cursor-pointer' src="github.png" alt="my GitHub profile" onClick={() => window.location.href = 'https://www.github.com'} />
+      <img className='h-8 w-8 cursor-pointer' src="github.png" alt="my GitHub profile" onClick={() => window.location.href = 'https://github.com/amir811537'} />
     </div>
   </div>
 </section>
