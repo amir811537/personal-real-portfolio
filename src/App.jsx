@@ -265,7 +265,7 @@ function App() {
         <p>a rental solution </p>
         <div className="card-actions flex justify-center gap-12 items-center">
         <button className="btn px-2">GitHub</button>
-        <button className="btn btn-outline text-black hover:text-white hover:bg-green-500">Live</button>
+       <a href="https://careful-pollution.surge.sh/"> <button className="btn btn-outline text-black hover:text-white hover:bg-green-500">Live</button></a>
         </div>
       </div>
     </div>
