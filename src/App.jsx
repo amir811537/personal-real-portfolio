@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import resumePdf from "./assets/Amir-resume .pdf"
+import resumePdf2 from "./assets/dev-resume.pdf"
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -8,8 +8,8 @@ function App() {
   };
   const handleDownload = () => {
     const anchor = document.createElement('a');
-    anchor.href = resumePdf;
-    anchor.download = 'Amir-resume .pdf';
+    anchor.href = resumePdf2;
+    anchor.download = 'dev-resume.pdf';
     anchor.click();
   };
 
