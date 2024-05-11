@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import resumePdf2 from "./assets/dev-resume.pdf"
+import resumePdf2 from "./assets/fullStack-resume.pdf";
+import hostimg from "../src/assets/host-pic.jpg"
+import { FaPhoneAlt } from "react-icons/fa";
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -81,24 +83,24 @@ function App() {
     </div>
     <div className="flex flex-col lg:flex-row gap-8 lg:gap-5">
       <div className="w-full lg:w-1/3 flex justify-center">
-        <img src="profile2nd.jpg" alt="Profile picture" className="rounded-3xl max-h-96" />
+        <img src={hostimg}alt="Profile picture" className="rounded-3xl max-h-96" />
       </div>
       <div className="w-full lg:w-2/3 flex flex-col justify-center gap-8">
         <div className="flex gap-8">
           <div className="flex-1 bg-white rounded-3xl border border-gray-700 border-solid p-6 text-center">
             <img src="experience.png" alt="Experience icon" className="cursor-pointer h-8 mx-auto" />
             <h3 className="text-xl font-semibold mt-4">Experience</h3>
-            <p className="mt-2">Fresher <br />Frontend Development</p>
+            <p className="mt-2">Full-Stack <br /> Development</p>
           </div>
           <div className="flex-1 bg-white rounded-3xl border border-gray-700 border-solid p-6 text-center">
             <img src="education.png" alt="Education icon" className="cursor-pointer h-8 mx-auto" />
             <h3 className="text-xl font-semibold mt-4">Education</h3>
-            <p className="mt-2">BBA in Finance <br />DU 7College</p>
+            <p className="mt-2">Bachelor of Business Administration</p>
           </div>
         </div>
         <div className="text-container">
           <p className="text-sm lg:text-base">
-          I’m a Front End Web developer who is passionate about making error-free websites with 100% client satisfaction. I have a passion for learning and sharing my knowledge with others as publicly as possible. I love to solve real-world problems.          </p>
+          I’m a Full-Stack Web developer who is passionate about making error-free websites with 100% client satisfaction. I have a passion for learning and sharing my knowledge with others as publicly as possible. I love to solve real-world problems.          </p>
         </div>
       </div>
     </div>
@@ -109,6 +111,8 @@ function App() {
   
    </div>
 </section>
+
+{/* skill section */}
 <section id="experience" className="py-8 px-4 lg:mt-32">
   <p className="text-center font-bold mb-4">Explore My</p>
   <h1 className="text-4xl lg:text-7xl font-bold text-center">Experience</h1>
@@ -158,7 +162,7 @@ function App() {
                 />
                 <div>
                   <h3>JavaScript</h3>
-                  <p>Basic</p>
+                  <p>Experienced</p>
                 </div>
               </article>
               <article>
@@ -182,7 +186,11 @@ function App() {
                   <h3>Material UI</h3>
                   <p>Intermediate</p>
                 </div>
-              </article>        </div>
+              </article>     
+              
+              
+              
+                 </div>
       </div>
       <div className="p-6 bg-white rounded-3xl border-gray-700 border-solid text-center mt-4 lg:mt-0 lg:ml-8">
         <h2 className="text-gray-500 font-bold text-xl mb-8">Backend Development</h2>
@@ -195,7 +203,7 @@ function App() {
                 />
                 <div>
                   <h3>MonngoDB</h3>
-                  <p>Basic</p>
+                  <p>Intermediate</p>
                 </div>
               </article>
               <article>
@@ -230,7 +238,22 @@ function App() {
                   <h3>Git</h3>
                   <p>Intermediate</p>
                 </div>
-              </article>        </div>
+              </article>     
+              <article>
+                <img
+                  src="checkmark.png"
+                  alt="Experience icon"
+                  className="cursor-pointer h-8 mx-auto"
+                />
+                <div>
+                  <h3>JWT</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>     
+              
+              
+              
+                 </div>
       </div>
     </div>
   </div>
@@ -240,40 +263,48 @@ function App() {
   </div>
 </section>
 
-
+{/* project section */}
 <section id="project" className="py-12">
   <div className="text-center">
     <p className="text-center font-bold mb-4">Browse My Recent</p>
     <h1 className="text-4xl lg:text-7xl font-bold text-center">Projects</h1>
   </div>
   <div className='grid grid-cols-1 lg:grid-cols-3 items-center justify-center gap-10 mt-32 place-items-center'>
+ 
+ {/* project 1 */}
   <div className="card lg:w-96 w-80 bg-base-100 shadow-xl">
       <figure><img src="bloodss.jpg" alt="project!" /></figure>
       <div className="card-body">
         <h2 className="card-title">Blood Donation</h2>
         <p>Blood Donation activities</p>
         <div className="card-actions flex justify-center gap-12 items-center">
-       <a href="https://github.com/amir811537/Hotle-booking-clientside"> <button className="btn px-2">GitHub</button></a>
+       <a href="https://github.com/amir811537/blood-donation-clientside"> <button className="btn px-2">GitHub</button></a>
          <a href="https://blood-donation-auth-adf7b.web.app/"><button className="btn btn-outline text-black hover:text-white hover:bg-green-500">Live</button></a> 
         </div>
       </div>
     </div>
+
+
+    {/* project 2 */}
     <div className="card lg:w-96 w-80 bg-base-100 shadow-xl">
       <figure><img src="house-swiftss.jpg" alt="project!" /></figure>
       <div className="card-body">
         <h2 className="card-title">House-swift</h2>
         <p>a rental solution </p>
         <div className="card-actions flex justify-center gap-12 items-center">
-        <button className="btn px-2">GitHub</button>
-       <a href="https://careful-pollution.surge.sh/"> <button className="btn btn-outline text-black hover:text-white hover:bg-green-500">Live</button></a>
+     <a href="https://github.com/shajjad00/house-swift-web-creations">
+     <button className="btn px-2">GitHub</button>
+     </a>
+       <a href="https://house-swift-web.netlify.app/"> <button className="btn btn-outline text-black hover:text-white hover:bg-green-500">Live</button></a>
         </div>
       </div>
     </div>
+    {/* project 3 */}
     <div className="card lg:w-96 w-80 bg-base-100 shadow-xl">
       <figure><img src="e-bazar.jpg" alt="project!" /></figure>
       <div className="card-body">
         <h2 className="card-title">Electronics-Bazar</h2>
-        <p>a E-commerece</p>
+        <p>an E-commerece</p>
         <div className="card-actions flex justify-center gap-12 items-center">
         <a href="https://github.com/amir811537/-Electronics-Bazar"><button className="btn px-2">GitHub</button></a>
 <a href="https://electronics-bazaar-auth.web.app/"><button className="btn btn-outline text-black hover:text-white hover:bg-green-500">Live</button>
@@ -291,6 +322,10 @@ function App() {
   <p className="text-center font-bold mb-4">Get in Touch</p>
   <h1 className="text-4xl lg:text-7xl font-bold text-center">Contact Me</h1>
   <div className="flex flex-col items-center lg:flex-row lg:justify-center lg:w-1/2 rounded-3xl border-gray-500 border bg-white mt-8 mb-8 lg:mx-auto p-2 ml-4 mr-4">
+    <div className="flex items-center justify-center gap-2 m-4">
+    <FaPhoneAlt />
+      <p><a href="tel:+01904722779">01904722779</a></p>
+    </div>
     <div className="flex items-center justify-center gap-2 m-4">
       <img
         src="email.png"
