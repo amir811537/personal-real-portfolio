@@ -56,7 +56,7 @@ function App() {
           </div>
         </nav>
 {/* hero section  */}
-        <section className='flex mt-32 flex-col lg:flex-row justify-center items-center gap-16'>
+        <section className='flex mt-11 lg:mt-28 flex-col lg:flex-row justify-center items-center gap-4 lg:gap-16'>
   <div>
     <img className='h-64 lg:h-96 w-64 lg:w-96 rounded-full' src="profile-update.jpg" alt="amir-profile" />
   </div>
@@ -76,7 +76,7 @@ function App() {
 </section>
 {/* about me section  */}
 
-<section id="about" className="py-8 lg:py-12 px-4 lg:mt-60 ">
+<section id="about" className="py-8 lg:py-12 ">
   <div className="max-w-full  mx-auto">
     <div className='py-24'>
     <p className="text-center font-bold mb-4">Get To Know More</p>
@@ -86,7 +86,7 @@ function App() {
       <div className="w-full lg:w-1/3 flex justify-center">
         <img src={hostimg}alt="Profile picture" className="rounded-3xl max-h-96" />
       </div>
-      <div className="w-full lg:w-2/3 flex flex-col justify-center gap-8">
+      <div className="w-full p-2 lg:p-0 flex flex-col justify-center gap-8">
         <div className="flex gap-8">
           <div className="flex-1 bg-white rounded-3xl border border-gray-700 border-solid p-6 text-center">
             <img src="experience.png" alt="Experience icon" className="cursor-pointer h-8 mx-auto" />
