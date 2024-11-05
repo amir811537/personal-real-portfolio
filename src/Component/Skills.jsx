@@ -6,7 +6,7 @@ import redux from "../assets/icons/redux.svg"
 import firebase from "../assets/icons/firebase.svg"
 import mongoDB from "../assets/icons/mongoDB.svg"
 import react from "../assets/icons/react.json"
-import nodeJs from "../assets/icons/nodeJs.json"
+import nodeJs from "../assets/icons/nodeJS.json"
 import expressjs from "../assets/icons/expressjs.svg"
 import Lottie from "lottie-react";
 const Skills = () => {
