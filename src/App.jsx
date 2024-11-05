@@ -20,7 +20,7 @@ function App() {
 
 
   const lenis = useLenis(({ scroll }) => {
-    // called every scroll
+    // called every scroll and
   })
 
 
