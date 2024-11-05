@@ -1,17 +1,20 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-     ],
 
-  theme: {
-    extend: { },
-    fontFamily:{
-      abc:["Poppins","sans-serif"]
-    }
-  },
-  // eslint-disable-next-line no-undef
-  plugins: [require("daisyui")],
-}
 
+  /** @type {import('tailwindcss').Config} */
+  export default {
+    content: [
+      "./index.html",
+      "./src/**/*.{js,ts,jsx,tsx}",
+    ],
+
+
+
+
+    theme: {
+      extend: {
+        colors: {
+          'primaryColor': '#61CE70',
+        },
+      }
+    },
+    plugins: [require("daisyui")],}

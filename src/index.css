@@ -1,5 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.animateSkillImage{
+    animation: animateImage 2s linear infinite ;
+    margin-top: -10px;
+}
+
+
+@keyframes animateImage {
+    0%  {
+        transform : translateY(0px)
+    }
+    50%  {
+        transform : translateY(10px)
+    }
+    100%{
+        transform : translateY(0px)
+
+    }
+    
+}
