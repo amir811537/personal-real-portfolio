@@ -18,10 +18,10 @@ const Footer = () => {
 
 		emailjs
 			.sendForm(
-				"service_yev8zd8",
-				"template_6xulcht",
+				"service_ni5iidg",
+				"template_rm9wy6g",
 				form.current,
-				"2B8UYN7nLz30S9w3i"
+				"-bm6gpyikLo3WdV4E"
 			)
 			.then(
 				(result) => {

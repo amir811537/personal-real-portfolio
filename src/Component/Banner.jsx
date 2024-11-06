@@ -55,7 +55,7 @@ const Banner = () => {
 							className="btn mt-5 btn-outline text-[#61CE70] hover:bg-[#61CE70] hover:text-black"
 						>
 							{" "}
-							DownLoad Resumew
+							DownLoad Resume
 						</button>
 					</a>
 				</div>
