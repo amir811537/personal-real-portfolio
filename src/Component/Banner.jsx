@@ -39,7 +39,7 @@ const Banner = () => {
 						cursor={true}
 						repeat={Infinity}
 						// style={{ fontSize: "3rem", lineHeight:"60px", color: "#61CE70", display: "block" , }}
-						className="text-3xl md:text-4xl lg:text-5xl text-[#61CE70] block  line"
+						className="text-3xl md:text-4xl lg:text-5xl text-[#CD5FF8] block  line"
 					/>
 					<p className="text-justify pb-5">
 						Welcome to my corner of the web! I'm a dedicated web
@@ -52,7 +52,7 @@ const Banner = () => {
 					<a href="https://drive.google.com/uc?export=download&id=165tJ1I6Q8iZz6EwA93FxFdsIYFG6s6cX">
 						<button
 							data-aos="zoom-in"
-							className="btn mt-5 btn-outline text-[#61CE70] hover:bg-[#61CE70] hover:text-black"
+							className="btn mt-5 btn-outline text-white hover:bg-[#CD5FF8] hover:text-white"
 						>
 							{" "}
 							DownLoad Resume
@@ -62,7 +62,7 @@ const Banner = () => {
 				<div className="mt-24 lg:mt-0">
 					<div
 						data-aos="zoom-in"
-						className="border-8 hover:translate-y-10 duration-150  p-4 border-[#61CE70] rounded-full w-80 h-80"
+						className="border-8 hover:translate-y-10 duration-150  p-4 border-[#CD5FF8] rounded-full w-80 h-80"
 					>
 						<img
 							className="rounded-full h-full object-cover  w-full"

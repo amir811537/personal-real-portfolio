@@ -9,7 +9,7 @@ const AboutMe = () => {
         <div id="About" className='py-20 lg:py-10 lg:p-10'>
             <div className='text-center my-10 lg:my-0'>
                 <h1 className='text-2xl md:text-4xl lg:text-5xl mb-4'>About Me</h1>
-                <p className='text-2xl md:text-4xl pb-10 lg:pb-0 lg:text-5xl text-[#61CE70]'>-----who I am ------</p>
+                <p className='text-2xl md:text-4xl pb-10 lg:pb-0 lg:text-5xl text-[#CD5FF8]'>-----who I am ------</p>
             </div>
 
             <div className='flex md:p-5  max-h-[700px]  justify-center items-center gap-10 lg:gap-28 flex-col-reverse md:flex-row-reverse  mx-auto mt-20 '>
@@ -26,7 +26,7 @@ const AboutMe = () => {
                 <div className="">
 					<div
 						data-aos="zoom-in"
-						className="border-8 hover:translate-y-10 duration-150  p-4 border-[#61CE70] rounded-full w-80 h-80"
+						className="border-8 hover:translate-y-10 duration-150  p-4 border-[#CD5FF8] rounded-full w-80 h-80"
 					>
 						<img
 							className="rounded-full h-full object-cover  w-full"

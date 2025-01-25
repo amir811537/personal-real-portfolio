@@ -20,7 +20,7 @@ const Skills = () => {
 				<h1 className="text-2xl md:text-4xl lg:text-5xl mb-4">
 					My skills
 				</h1>
-				<p className="text-2xl  md:text-3xl lg:text-5xl text-[#61CE70]">
+				<p className="text-2xl  md:text-3xl lg:text-5xl text-[#CD5FF8]">
 					-----what I know ------
 				</p>
 			</div>
@@ -28,67 +28,67 @@ const Skills = () => {
 			<div className="">
 				<div className=" overflow-hidden flex flex-wrap justify-center pt-10 gap-10 my-10">
 					<div className="">
-						<div className="w-36 h-36  border-2 border-[#61CE70] ">
+						<div className="w-36 h-36  border-2 border-[#CD5FF8] ">
 							<img src={html} className="h-full animateSkillImage  p-6 mx-auto" alt="" />
 						</div>
-						<h1 className="text-[#1a1a1a] font-bold p-2 text-center w-36 bg-[#61CE70]">HTML</h1>
+						<h1 className="text-[#1a1a1a] font-bold p-2 text-center w-36 bg-[#CD5FF8]">HTML</h1>
 					</div>
 					<div className="">
-						<div className="w-36 h-36  border-2 border-[#61CE70] ">
+						<div className="w-36 h-36  border-2 border-[#CD5FF8] ">
 							<img src={css} className=" animateSkillImage  p-8 mx-auto" alt="" />
 						</div>
-						<h1 className="text-[#1a1a1a] font-bold p-2 text-center w-36 bg-[#61CE70]">CSS</h1>
+						<h1 className="text-[#1a1a1a] font-bold p-2 text-center w-36 bg-[#CD5FF8]">CSS</h1>
 					</div>
 					<div className="">
-						<div className="w-36 h-36  border-2 border-[#61CE70] ">
+						<div className="w-36 h-36  border-2 border-[#CD5FF8] ">
 							<img src={tailwind} className=" animateSkillImage  p-5 mx-auto" alt="" />
 						</div>
-						<h1 className="text-[#1a1a1a] font-bold p-2 text-center w-36 bg-[#61CE70]">Tailwind</h1>
+						<h1 className="text-[#1a1a1a] font-bold p-2 text-center w-36 bg-[#CD5FF8]">Tailwind</h1>
 					</div>
 					<div className="">
-						<div className="w-36 h-36  border-2 border-[#61CE70] ">
+						<div className="w-36 h-36  border-2 border-[#CD5FF8] ">
 							<img src={js} className="h-full animateSkillImage  p-8 mx-auto" alt="" />
 						</div>
-						<h1 className="text-[#1a1a1a] font-bold p-2 text-center w-36 bg-[#61CE70]">Javascript</h1>
+						<h1 className="text-[#1a1a1a] font-bold p-2 text-center w-36 bg-[#CD5FF8]">Javascript</h1>
 					</div>
 					
 					
 					
 					<div className="">
-						<div className="w-36 h-36 border-2 border-[#61CE70] ">
+						<div className="w-36 h-36 border-2 border-[#CD5FF8] ">
 							<Lottie animationData={react} loop={true} autoplay={true} style={{ width: 'full', height: 'full' }} />
 						</div>
-						<h1 className="text-[#1a1a1a] font-bold p-2 text-center w-36 bg-[#61CE70]">React</h1>
+						<h1 className="text-[#1a1a1a] font-bold p-2 text-center w-36 bg-[#CD5FF8]">React</h1>
 					</div>
 					<div className="">
-						<div className="w-36 h-36  border-2 border-[#61CE70] ">
+						<div className="w-36 h-36  border-2 border-[#CD5FF8] ">
 							<img src={redux} className="h-full animateSkillImage  p-8 mx-auto" alt="" />
 						</div>
-						<h1 className="text-[#1a1a1a] font-bold p-2 text-center w-36 bg-[#61CE70]">Redux</h1>
+						<h1 className="text-[#1a1a1a] font-bold p-2 text-center w-36 bg-[#CD5FF8]">Redux</h1>
 					</div>
 					<div className="">
-						<div className="w-36 h-36  border-2 border-[#61CE70] ">
+						<div className="w-36 h-36  border-2 border-[#CD5FF8] ">
 							<img src={firebase} className="h-full animateSkillImage  p-8 mx-auto" alt="" />
 						</div>
-						<h1 className="text-[#1a1a1a] font-bold p-2 text-center w-36 bg-[#61CE70]">Firebase</h1>
+						<h1 className="text-[#1a1a1a] font-bold p-2 text-center w-36 bg-[#CD5FF8]">Firebase</h1>
 					</div>
 					<div className="">
-						<div className="w-36 h-36 border-2 border-[#61CE70] ">
+						<div className="w-36 h-36 border-2 border-[#CD5FF8] ">
 							<Lottie animationData={nodeJs} loop={true} autoplay={true} style={{ width: 'full', height: 'full' }} />
 						</div>
-						<h1 className="text-[#1a1a1a] font-bold p-2 text-center w-36 bg-[#61CE70]">Node Js</h1>
+						<h1 className="text-[#1a1a1a] font-bold p-2 text-center w-36 bg-[#CD5FF8]">Node Js</h1>
 					</div>
 					<div className="">
-						<div className="w-36 h-36  border-2 border-[#61CE70] ">
+						<div className="w-36 h-36  border-2 border-[#CD5FF8] ">
 							<img src={expressjs} className="h-full animateSkillImage  p-8 mx-auto" alt="" />
 						</div>
-						<h1 className="text-[#1a1a1a] font-bold p-2 text-center w-36 bg-[#61CE70]">expressjs</h1>
+						<h1 className="text-[#1a1a1a] font-bold p-2 text-center w-36 bg-[#CD5FF8]">expressjs</h1>
 					</div>
 					<div className="">
-						<div className="w-36 h-36  border-2 border-[#61CE70] ">
+						<div className="w-36 h-36  border-2 border-[#CD5FF8] ">
 							<img src={mongoDB} className="h-full animateSkillImage  p-5 mx-auto" alt="" />
 						</div>
-						<h1 className="text-[#1a1a1a] font-bold p-2 text-center w-36 bg-[#61CE70]">MongoDB</h1>
+						<h1 className="text-[#1a1a1a] font-bold p-2 text-center w-36 bg-[#CD5FF8]">MongoDB</h1>
 					</div>
 
 

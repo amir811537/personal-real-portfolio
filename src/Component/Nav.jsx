@@ -49,7 +49,7 @@ const Nav = () => {
 				</div>
 
 				<div className="flex-none">
-					<ul className=" -translate-y-24 menu menu-horizontal text-[#61CE70] px-1">
+					<ul className=" -translate-y-24 menu menu-horizontal text-[#CD5FF8] px-1">
 
 						<li>
 							<a className="box" href="#About">About Me</a>

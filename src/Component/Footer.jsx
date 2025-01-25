@@ -54,7 +54,7 @@ const Footer = () => {
 					className="flex gap-2 text-xl items-center"
 				>
 					<PiLinkSimpleBold
-						className="text-[#61CE70]"
+						className="text-white"
 						size={40}
 					></PiLinkSimpleBold>
 					<div className="flex flex-col">
@@ -64,21 +64,21 @@ const Footer = () => {
 								href="https://www.facebook.com/aamir.hossain.18041"
 								className="flex  items-center gap-2"
 							>
-								<FaFacebook className="text-[#61CE70]" />
+								<FaFacebook className="text-white" />
 								<span className="hidden md:block">Facebook</span>
 							</a>
 							<a
 								href="https://www.linkedin.com/in/aamir-hossain-a37911274/"
 								className="flex items-center gap-2"
 							>
-								<FaLinkedin className="text-[#61CE70]" />
+								<FaLinkedin className="text-white" />
 								<span className="hidden md:block">LinkedIn</span>
 							</a>
 							<a
 								href="https://github.com/amir811537"
 								className="flex items-center gap-2"
 							>
-								<FaGithub className="text-[#61CE70]" /> <span className="hidden md:block">GitHub</span>
+								<FaGithub className="text-white" /> <span className="hidden md:block">GitHub</span>
 							</a>
 						</div>
 					</div>
@@ -88,7 +88,7 @@ const Footer = () => {
 					
 					className="flex gap-2 my-16 items-center  text-2xl"
 				>
-					<MdEmail className="text-[#61CE70]" size={40} />
+					<MdEmail className="text-white" size={40} />
 					<div>
 						<h1>Email</h1>
 						<p className="text-xl">amirhossain.bc75@gmail.com</p>
@@ -99,7 +99,7 @@ const Footer = () => {
 					
 					className="flex gap-2 my-10 items-center  text-2xl"
 				>
-					<FaLocationDot className="text-[#61CE70]" size={40} />
+					<FaLocationDot className="text-white" size={40} />
 					<div>
 						<h1>Address</h1>
 						<p className="text-xl"> Dhaka , Bangladesh</p>
@@ -117,7 +117,7 @@ const Footer = () => {
 							placeholder="Full Name"
 							required
 							name="from_name"
-							className="input input-bordered w-full max-w-sm border-[#61CE70]"
+							className="input input-bordered w-full max-w-sm border-[#CD5FF8]"
 						/>
 						<input
 							
@@ -125,17 +125,17 @@ const Footer = () => {
 							placeholder="Your Email"
 							name="from_email"
 							required
-							className="border-[#61CE70] input input-bordered w-full max-w-sm"
+							className="border-[#CD5FF8] input input-bordered w-full max-w-sm"
 						/>
 						<textarea
 							
-							className="textarea h-40 border-[#61CE70] textarea-bordered w-full max-w-sm"
+							className="textarea h-40 border-[#CD5FF8] textarea-bordered w-full max-w-sm"
 							name="message"
 							placeholder="Your message"
 						></textarea>
 						<button
 							type="submit"
-							className="btn max-w-sm  btn-primary bg-[#61CE70] hover:bg-[#61CE70] "
+							className="btn max-w-sm  btn-primary bg-[#CD5FF8] hover:bg-[#CD5FF8] "
 						>
 							{" "}
 							Send Email

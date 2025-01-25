@@ -103,9 +103,9 @@ const Projects = () => {
 
 
 				<div className="flex flex-wrap bg-black justify-center gap-5">
-					<button onClick={() => setActiveButton("all Product")} className={` ${(activeButton == "all Product") ? "bg-[#61CE70] text-black" : ""}     btn lg:px-8 rounded-md  hover:bg-[#61CE70] hover:text-black btn-outline  hover:border-none text-[#61CE70]`}> All Projects</button>
-					<button onClick={() => setActiveButton("FrontEnd")} className={` ${(activeButton == "FrontEnd") ? "bg-[#61CE70] text-black" : ""}     btn lg:px-8 rounded-md  hover:bg-[#61CE70] hover:text-black btn-outline  hover:border-none text-[#61CE70]`}> Frontend Projects</button>
-					<button onClick={() => setActiveButton("Full Stack")} className={` ${(activeButton == "Full Stack") ? "bg-[#61CE70] text-black" : ""}     btn lg:px-8 rounded-md  hover:bg-[#61CE70] hover:text-black btn-outline  hover:border-none text-[#61CE70]`}> Full Stack Projects</button>
+					<button onClick={() => setActiveButton("all Product")} className={` ${(activeButton == "all Product") ? "bg-[#CD5FF8] text-white" : ""}     btn lg:px-8 rounded-md  hover:bg-[#CD5FF8] hover:text-white btn-outline  hover:border-none text-white`}> All Projects</button>
+					<button onClick={() => setActiveButton("FrontEnd")} className={` ${(activeButton == "FrontEnd") ? "bg-[#CD5FF8] text-white" : ""}     btn lg:px-8 rounded-md  hover:bg-[#CD5FF8] hover:text-white btn-outline  hover:border-none text-white`}> Frontend Projects</button>
+					<button onClick={() => setActiveButton("Full Stack")} className={` ${(activeButton == "Full Stack") ? "bg-[#CD5FF8] text-white" : ""}     btn lg:px-8 rounded-md  hover:bg-[#CD5FF8] hover:text-white btn-outline  hover:border-none text-white`}> Full Stack Projects</button>
 
 
 				</div>
@@ -123,23 +123,23 @@ const Projects = () => {
 							</div>
 
 							<div className="lg:w-[450px] h-full">
-								<div className="min-h-[340px] bg-[#61CE70]/20 backdrop-blur-lg border border-white/20 shadow-lg p-6 rounded-lg">
+								<div className="min-h-[340px] bg-[#CD5FF8]/20 backdrop-blur-lg border border-white/20 shadow-lg p-6 rounded-lg rounded-b-none">
 									<h1 className="text-4xl">{item?.title}</h1>
 									<p className="text-lg mt-5">{item?.description}</p>
 								</div>
 								<div className="flex justify-between">
-									<Link to={item?.clintLink} className="btn hover:bg-[#4CAB58] flex-1 rounded-none text-black bg-[#61CE70]">
+									<Link to={item?.clintLink} className="btn hover:bg-[#c443f7] flex-1 rounded-none rounded-b text-white bg-[#CD5FF8]">
 										<FaGithub /> Clint side
 									</Link>
 
 									{/* Conditionally render the Server side button */}
 									{item?.serverLink && (
-										<Link to={item?.serverLink} className="btn hover:bg-[#4CAB58] flex-1 rounded-none text-black bg-[#61CE70]">
+										<Link to={item?.serverLink} className="btn hover:bg-[#c443f7] flex-1 rounded-none rounded-b text-white bg-[#CD5FF8]">
 											<FaGithub /> Server side
 										</Link>
 									)}
 
-									<Link to={item?.LiveLInk} className="btn hover:bg-[#4CAB58] flex-1 rounded-none text-black bg-[#61CE70]">
+									<Link to={item?.LiveLInk} className="btn hover:bg-[#c443f7] flex-1 rounded-none rounded-b text-white bg-[#CD5FF8]">
 										<FaExternalLinkAlt /> Visit website
 									</Link>
 								</div>
