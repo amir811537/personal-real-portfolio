@@ -42,6 +42,7 @@ const Footer = () => {
 				}
 			);
 	};
+	//  this is change 
 
 	return (
 		<div
