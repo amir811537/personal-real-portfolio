@@ -66,6 +66,9 @@ const Nav = () => {
 						<li>
 							<a className="box" href="#Contact">Contact</a>
 						</li>
+						<li>
+							<a className="box" href="/Login">Login</a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -96,6 +99,7 @@ const Nav = () => {
 							<li><a href="#Projects">Projects</a></li>
 							<li><a href="#Education">Education</a></li>
 							<li><a href="#Contact">Contact</a></li>
+							<li><a href="Login">Login</a></li>
 						</ul>
 					)}
 				</div>
