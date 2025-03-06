@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
-import { FaStar } from "react-icons/fa6";
 
 import "./banner.css";
-import ProfileImage from "../assets/profile.jpg";
-import StarryBackground from "./StarryBackground";
+
 const Banner = () => {
+
+
+  const [profile, setProfile] = useState([]);
+
+
+	useEffect(() => {
+	  fetch("https://personal-real-portfolioserverside.vercel.app/protfolio")
+		.then((res) => res.json())
+		.then((data) => setProfile( data));
+	}, []);
+
+
+
 	<style>
 		{`
     @media (max-width: 600px) {
@@ -66,7 +77,7 @@ const Banner = () => {
 					>
 						<img
 							className="rounded-full h-full object-cover  w-full"
-							src={ProfileImage}
+							src={profile[0]?.images[0]}
 							alt=""
 						/>
 					</div>

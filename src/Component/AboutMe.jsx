@@ -1,9 +1,15 @@
-import React from 'react';
-import image from "../assets/profile2.jpg"
-
+import React, { useEffect, useState } from 'react';
 const AboutMe = () => {
 
+  const [profile, setProfile] = useState([]);
 
+
+    useEffect(() => {
+      fetch("https://personal-real-portfolioserverside.vercel.app/protfolio")
+        .then((res) => res.json())
+        .then((data) => setProfile( data));
+    }, []);
+  
 
     return (
         <div id="About" className='py-20 lg:py-10 lg:p-10'>
@@ -30,7 +36,7 @@ const AboutMe = () => {
 					>
 						<img
 							className="rounded-full h-full object-cover  w-full"
-							src={image}
+							src={profile[0]?.images[1]}
 							alt=""
 						/>
 					</div>

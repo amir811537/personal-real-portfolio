@@ -1,17 +1,86 @@
-import { useState } from "react";
-import profile1 from "../../assets/profile.jpg";
-import profile2 from "../../assets/profile2.jpg";
+import { useEffect, useState } from "react";
+import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
+import { app } from "../../../firebase.config";
 
 const ProfilePhoto = () => {
-    const [selectedPhotos, setSelectedPhotos] = useState([profile1, profile2]);
+    const [selectedPhotos, setSelectedPhotos] = useState([null, null]); // Store URLs of images
+    const [imageFiles, setImageFiles] = useState([null, null]); // Store selected file objects
+    const [uploading, setUploading] = useState(false);
+    const [profileId, setProfileId] = useState(null); // Store user profile ID
 
+    // Fetch profile photos on component mount
+    useEffect(() => {
+        fetch("http://localhost:5000/protfolio")
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.length > 0) {
+                    setSelectedPhotos(data[0].images || [null, null]);
+                    setProfileId(data[0]._id); // Store the ID for PATCH request
+                }
+            })
+            .catch((error) => console.error("Error fetching profile photos:", error));
+    }, []);
+
+    // Handle file selection
     const handleFileChange = (event, index) => {
         const file = event.target.files[0];
         if (!file) return;
 
         const newPhotos = [...selectedPhotos];
-        newPhotos[index] = URL.createObjectURL(file);
+        newPhotos[index] = URL.createObjectURL(file); // Show preview
         setSelectedPhotos(newPhotos);
+
+        const newFiles = [...imageFiles];
+        newFiles[index] = file; // Store file for upload
+        setImageFiles(newFiles);
+    };
+
+    // Handle profile photo update
+    const handleUpdate = async () => {
+        if (!imageFiles[0] && !imageFiles[1]) {
+            console.warn("No new images selected for upload.");
+            return;
+        }
+
+        setUploading(true);
+        const storage = getStorage(app);
+        const updatedUrls = [...selectedPhotos];
+
+        for (let i = 0; i < imageFiles.length; i++) {
+            const file = imageFiles[i];
+            if (file) {
+                try {
+                    const storageRef = ref(storage, `profile_photos/${file.name}`);
+                    await uploadBytes(storageRef, file);
+                    const downloadUrl = await getDownloadURL(storageRef);
+                    updatedUrls[i] = downloadUrl;
+                    console.log(`Profile ${i + 1} Updated:`, downloadUrl);
+                } catch (error) {
+                    console.error(`Error updating profile ${i + 1}:`, error);
+                }
+            }
+        }
+
+        // ✅ Update profile photo URLs in the backend using PATCH
+        try {
+            const response = await fetch(`http://localhost:5000/protfolio/${profileId}`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ images: updatedUrls }),
+            });
+
+            if (response.ok) {
+                console.log("Profile photos successfully updated!");
+            } else {
+                console.error("Failed to update profile photos in the database.");
+            }
+        } catch (error) {
+            console.error("Error sending update request:", error);
+        }
+
+        setUploading(false);
     };
 
     return (
@@ -30,7 +99,7 @@ const ProfilePhoto = () => {
                                     onChange={(event) => handleFileChange(event, index)}
                                 />
                                 <img
-                                    src={selectedPhotos[index]}
+                                    src={selectedPhotos[index] || ""}
                                     alt={`Profile ${index + 1}`}
                                     className="w-32 h-32 rounded-md shadow-lg object-cover border-2 border-gray-300 hover:border-red-500"
                                 />
@@ -40,6 +109,17 @@ const ProfilePhoto = () => {
                     ))}
                 </div>
             </div>
+
+            {/* Update Button */}
+            {imageFiles.some((file) => file !== null) && (
+                <button
+                    onClick={handleUpdate}
+                    className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-all disabled:bg-gray-400"
+                    disabled={uploading}
+                >
+                    {uploading ? "Updating..." : "Update Profile Photos"}
+                </button>
+            )}
         </div>
     );
 };

@@ -1,6 +1,10 @@
 import { useState } from "react";
 import DashboardHome from "./DashboardHome";
 import ProfilePhoto from "./profilephoto";
+import AddProject from "./AddProject";
+import UpdateProjects from "./UpdateProjects";
+import Addskill from "./Addskill";
+import UpdaateSkills from "./UpdateSkills";
 
 const Admin = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -17,16 +21,30 @@ const Admin = () => {
                     </button>
                 </div>
                 <nav className="mt-4 space-y-2">
-                    <button 
-                        onClick={() => setSelectedSection("Dashboard")} 
+                    <button
+                        onClick={() => setSelectedSection("Dashboard")}
                         className={`block w-full text-left text-gray-100 p-3 rounded-lg hover:bg-gray-700 transition ${selectedSection === "Dashboard" ? "bg-gray-700" : ""}`}>
                         Dashboard
                     </button>
-                    <button 
-                        onClick={() => setSelectedSection("ProfilePhoto")} 
+                    <button
+                        onClick={() => setSelectedSection("ProfilePhoto")}
                         className={`block w-full text-left text-gray-100 p-3 rounded-lg hover:bg-gray-700 transition ${selectedSection === "ProfilePhoto" ? "bg-gray-700" : ""}`}>
                         Profile Photo
                     </button>
+                    <button
+                        onClick={() => setSelectedSection("addNewProject")}
+                        className={`block w-full text-left text-gray-100 p-3 rounded-lg hover:bg-gray-700 transition ${selectedSection === "ProfilePhoto" ? "bg-gray-700" : ""}`}>
+                        Add New Project
+                    </button>
+                    <button
+                        onClick={() => setSelectedSection("UpdateProject")}
+                        className={`block w-full text-left text-gray-100 p-3 rounded-lg hover:bg-gray-700 transition ${selectedSection === "UpdateProject" ? "bg-gray-700" : ""}`}>Update Projects</button>
+                    <button
+                        onClick={() => setSelectedSection("Addskills")}
+                        className={`block w-full text-left text-gray-100 p-3 rounded-lg hover:bg-gray-700 transition ${selectedSection === "Addskills" ? "bg-gray-700" : ""}`}>Add New Skill</button>
+                    <button
+                        onClick={() => setSelectedSection("UpdateSkills")}
+                        className={`block w-full text-left text-gray-100 p-3 rounded-lg hover:bg-gray-700 transition ${selectedSection === "UpdateSkills" ? "bg-gray-700" : ""}`}>Update a skill</button>
                 </nav>
             </div>
 
@@ -43,6 +61,10 @@ const Admin = () => {
                     {/* Render the selected section dynamically */}
                     {selectedSection === "Dashboard" && <DashboardHome />}
                     {selectedSection === "ProfilePhoto" && <ProfilePhoto></ProfilePhoto>}
+                    {selectedSection === "addNewProject" && <AddProject></AddProject>}
+                    {selectedSection === "UpdateProject" && <UpdateProjects></UpdateProjects>}
+                    {selectedSection === "Addskills" && <Addskill></Addskill>}
+                    {selectedSection === "UpdateSkills" && <UpdaateSkills></UpdaateSkills>}
                 </div>
             </div>
 

@@ -1,13 +1,16 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import StarryBackground from "./StarryBackground";
 import { FaEye } from "react-icons/fa";
 import { IoIosEyeOff } from "react-icons/io";
 
+
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
+  
+  
 
     // React Hook Form setup
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -88,6 +91,7 @@ const Login = () => {
                                 >
                                     Login
                                 </button>
+                    
                             </form>
 
                             {/* Forgot Password Link */}

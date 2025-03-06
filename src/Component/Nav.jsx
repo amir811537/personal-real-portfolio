@@ -1,9 +1,11 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useContext } from 'react';
 import logo from "../assets/logo/amir.png";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { RiMenu2Line } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
+import { AuthContext } from '../Authprovider/Authprovider';
+import { Link } from 'react-router-dom';
 
 gsap.registerPlugin(useGSAP);
 
@@ -14,6 +16,21 @@ const Nav = () => {
 
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 	const [isOpen , setIsOpen] = useState(false)
+
+    const { logOut, user } = useContext(AuthContext);
+
+
+    const handelsingout = () => {
+        logOut()
+            .then((result) => {
+                console.log(result);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    };
+
+
 
 	const toggleDropdown = () => {
 		setIsDropdownOpen(!isDropdownOpen);
@@ -66,9 +83,22 @@ const Nav = () => {
 						<li>
 							<a className="box" href="#Contact">Contact</a>
 						</li>
-						<li>
+						{/* <li>
 							<a className="box" href="/Login">Login</a>
-						</li>
+						</li> */}
+
+						{user ? (
+              <li>
+                <a className="box" onClick={handelsingout}>
+                Sign Out
+              </a>
+              </li>
+            ) : (
+             <li> <a className='box' href="/Login">
+          Login
+          </a> </li>
+            )}
+
 					</ul>
 				</div>
 			</div>
