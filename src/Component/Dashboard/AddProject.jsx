@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
 import { app } from "../../../firebase.config";
-// new
+
 const AddProject = () => {
     const { register, handleSubmit, reset } = useForm();
     const [uploading, setUploading] = useState(false);
