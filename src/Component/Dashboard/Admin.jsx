@@ -1,10 +1,11 @@
 import { useState } from "react";
 import DashboardHome from "./DashboardHome";
-import ProfilePhoto from "./profilephoto";
+
 import AddProject from "./AddProject";
 import UpdateProjects from "./UpdateProjects";
 import Addskill from "./Addskill";
 import UpdaateSkills from "./UpdateSkills";
+import Profilephoto from "./profilephoto";
 
 const Admin = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -60,7 +61,7 @@ const Admin = () => {
                 <div className="p-4 overflow-hidden">
                     {/* Render the selected section dynamically */}
                     {selectedSection === "Dashboard" && <DashboardHome />}
-                    {selectedSection === "ProfilePhoto" && <ProfilePhoto></ProfilePhoto>}
+                    {selectedSection === "ProfilePhoto" && <Profilephoto></Profilephoto>}
                     {selectedSection === "addNewProject" && <AddProject></AddProject>}
                     {selectedSection === "UpdateProject" && <UpdateProjects></UpdateProjects>}
                     {selectedSection === "Addskills" && <Addskill></Addskill>}

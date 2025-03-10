@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
 import { app } from "../../../firebase.config";
 
-const ProfilePhoto = () => {
+const Profilephoto = () => {
     const [selectedPhotos, setSelectedPhotos] = useState([null, null]); // Store URLs of images
     const [imageFiles, setImageFiles] = useState([null, null]); // Store selected file objects
     const [uploading, setUploading] = useState(false);
@@ -125,4 +125,4 @@ const ProfilePhoto = () => {
     );
 };
 
-export default ProfilePhoto;
+export default Profilephoto;
