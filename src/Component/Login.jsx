@@ -17,7 +17,7 @@ const Login = () => {
 
     // Hardcoded credentials
     const data = {
-        email: "amirhossain2002@gmail.com",
+        email: "aamirhossain2002@gmail.com",
         password: "amir2002",
         userName: "amir811537"
     };
