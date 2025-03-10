@@ -121,6 +121,7 @@ const ProfilePhoto = () => {
                 </button>
             )}
         </div>
+        // added new code
     );
 };
 
