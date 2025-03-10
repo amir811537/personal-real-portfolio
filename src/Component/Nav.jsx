@@ -94,7 +94,7 @@ const Nav = () => {
               </a>
               </li>
             ) : (
-             <li> <a className='box' href="/Login">
+             <li> <a className='box' href="/login">
           Login
           </a> </li>
             )}
@@ -129,7 +129,7 @@ const Nav = () => {
 							<li><a href="#Projects">Projects</a></li>
 							<li><a href="#Education">Education</a></li>
 							<li><a href="#Contact">Contact</a></li>
-							<li><a href="Login">Login</a></li>
+							<li><a href="login">Login</a></li>
 						</ul>
 					)}
 				</div>
