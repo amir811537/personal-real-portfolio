@@ -5,7 +5,8 @@ import UpdateProjects from "./UpdateProjects";
 import Addskill from "./Addskill";
 import UpdaateSkills from "./UpdateSkills";
 import ChnageProfile from "./ChnageProfile";
-
+import App from '../../App';
+import { Link } from "react-router-dom";
 const Admin = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [selectedSection, setSelectedSection] = useState("Dashboard");
@@ -33,7 +34,7 @@ const Admin = () => {
                     </button>
                     <button
                         onClick={() => setSelectedSection("addNewProject")}
-                        className={`block w-full text-left text-gray-100 p-3 rounded-lg hover:bg-gray-700 transition ${selectedSection === "ProfilePhoto" ? "bg-gray-700" : ""}`}>
+                        className={`block w-full text-left text-gray-100 p-3 rounded-lg hover:bg-gray-700 transition ${selectedSection === "addNewProject" ? "bg-gray-700" : ""}`}>
                         Add New Project
                     </button>
                     <button
@@ -45,6 +46,7 @@ const Admin = () => {
                     <button
                         onClick={() => setSelectedSection("UpdateSkills")}
                         className={`block w-full text-left text-gray-100 p-3 rounded-lg hover:bg-gray-700 transition ${selectedSection === "UpdateSkills" ? "bg-gray-700" : ""}`}>Update a skill</button>
+                   <Link to="/"> <button className="block w-full text-left text-gray-100 p-3 rounded-lg hover:bg-gray-700 transition my-2">Back to Home</button></Link>
                 </nav>
             </div>
 
