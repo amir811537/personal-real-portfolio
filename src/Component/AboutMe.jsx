@@ -11,6 +11,8 @@ const AboutMe = () => {
     }, []);
   
 
+    // vercel develpment not ok 
+
     return (
         <div id="About" className='py-20 lg:py-10 lg:p-10'>
             <div className='text-center my-10 lg:my-0'>
