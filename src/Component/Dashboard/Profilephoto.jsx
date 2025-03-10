@@ -10,7 +10,7 @@ const ProfilePhoto = () => {
 
     // Fetch profile photos on component mount
     useEffect(() => {
-        fetch("http://localhost:5000/protfolio")
+        fetch("https://personal-real-portfolioserverside.vercel.app/protfolio")
             .then((res) => res.json())
             .then((data) => {
                 if (data.length > 0) {
@@ -63,7 +63,7 @@ const ProfilePhoto = () => {
 
         // ✅ Update profile photo URLs in the backend using PATCH
         try {
-            const response = await fetch(`http://localhost:5000/protfolio/${profileId}`, {
+            const response = await fetch(`https://personal-real-portfolioserverside.vercel.app/protfolio/${profileId}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",
