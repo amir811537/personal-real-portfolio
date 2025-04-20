@@ -17,7 +17,7 @@ const Education = () => {
 			<div  className="space-y-4 md:space-y-10">
 				<div>
 					<h1 className="text-3xl mb-2">Currently Studying </h1>
-					<p>Bachelor of Business Administration at affiliated 7 College university of Dhaka</p>
+					<p>Bachelor of Business Administration at Dhaka Central University</p>
 				</div>
 				<div>
 					<h1 className="text-3xl mb-2"> Completed HSC from</h1>
