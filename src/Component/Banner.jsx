@@ -1,97 +1,73 @@
-import React, { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
-
+import profile from "../assets/profileimage/job profile .jpg";
 import "./banner.css";
 
 const Banner = () => {
+  return (
+    <div id="home" className="min-h-screen flex items-center justify-center  bg-transparent">
+      <div className="max-w-5xl w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-16">
 
+        {/* Text Section */}
+        <div className="flex-1 flex flex-col gap-5 text-center md:text-left">
 
-  const [profile, setProfile] = useState([]);
+          {/* Available badge */}
+          <span className="inline-flex items-center gap-2 w-fit mx-auto md:mx-0 bg-purple-500/10 border border-purple-500/30 text-[#CD5FF8] text-sm px-4 py-1 rounded-full">
+            <span className="w-2 h-2 rounded-full bg-[#CD5FF8] animate-pulse" />
+           Open to Opportunities
+          </span>
 
+          <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+            Hi, I&apos;m Amir Hossain!
+          </h1>
 
-	useEffect(() => {
-	  fetch("https://personal-real-portfolioserverside.vercel.app/protfolio")
-		.then((res) => res.json())
-		.then((data) => setProfile( data));
-	}, []);
+          <TypeAnimation
+       sequence={[
+  "Finance & Banking Graduate", 2000,
+  "MERN Stack Developer", 2000,
+  "FinTech Enthusiast", 2000,
+  "React & Node.js Developer", 2000,
+]}
+            wrapper="span"
+            cursor={true}
+            repeat={Infinity}
+            className="text-2xl md:text-4xl font-bold text-[#CD5FF8] block min-h-[2.5rem]"
+          />
 
+       <p className="text-white/70 leading-relaxed text-base max-w-lg mx-auto md:mx-0">
+  I&apos;m a Finance & Banking graduate and MERN Stack Developer passionate about
+  building modern web applications and exploring innovative FinTech solutions.
+  I combine analytical financial knowledge with software development skills to
+  create user-friendly digital products that solve real-world business and
+  financial challenges.
+</p>
 
+          <div className="mt-2">
+            <a
+              href="https://drive.google.com/uc?export=download&id=165tJ1I6Q8iZz6EwA93FxFdsIYFG6s6cX"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="px-8 py-3 border-2 border-[#CD5FF8] text-white rounded-lg font-medium hover:bg-[#CD5FF8] transition-colors duration-200">
+                Download Resume
+              </button>
+            </a>
+          </div>
+        </div>
 
-	<style>
-		{`
-    @media (max-width: 600px) {
-      .text-3xl {
-        font-size: 30px;
-      }
-    }
-  `}
-	</style>;
+        {/* Image Section */}
+        <div className="flex-shrink-0">
+          <div className="border-[6px] border-[#CD5FF8] rounded-full p-1.5 w-52 h-52 md:w-72 md:h-72 hover:-translate-y-3 transition-transform duration-300">
+            <img
+              className="rounded-full h-full w-full object-cover"
+              src={profile}
+              alt="Amir Hossain profile"
+            />
+          </div>
+        </div>
 
-	return (
-		<div id="home">
-			<div className="w-full  bg-transparent p-5 h-screen max-h-[700px]  flex flex-col-reverse md:flex-row items-center justify-center gap-28 md:gap-20">
-				<div className="md:w-1/2 space-y-8 ">
-					<h1 className="text-3xl md:text-4xl lg:text-5xl font-bold  text-white">
-						HI, I'M Amir !
-					</h1>
-
-					<TypeAnimation
-						sequence={[
-							"junior Web Developer", // Types 'One'
-							1000, // Waits 1s
-							"Front end Developer", // Deletes 'One' and types 'Two'
-							2000, // Waits 2s
-							"Junior Mern  Developer", // Types 'Three' without deleting 'Two'
-							() => {
-								console.log("Sequence completed");
-							},
-						]}
-						wrapper="span"
-						cursor={true}
-						repeat={Infinity}
-						// style={{ fontSize: "3rem", lineHeight:"60px", color: "#61CE70", display: "block" , }}
-						className="text-3xl md:text-4xl lg:text-5xl text-[#CD5FF8] block  line"
-					/>
-					<p className="text-justify pb-5">
-						Welcome to my corner of the web! I'm a dedicated web
-						developer with expertise in HTML, CSS, JavaScript,
-						React, and more. I bring creativity and technical skill
-						to every project, ensuring a seamless and engaging user
-						experience.
-					</p>
-
-					<a href="https://drive.google.com/uc?export=download&id=165tJ1I6Q8iZz6EwA93FxFdsIYFG6s6cX">
-						<button
-							data-aos="zoom-in"
-							className="btn mt-5 btn-outline text-white hover:bg-[#CD5FF8] hover:text-white"
-						>
-							{" "}
-							DownLoad Resume
-						</button>
-					</a>
-				</div>
-				<div className="mt-24 lg:mt-0">
-					<div
-						data-aos="zoom-in"
-						className="border-8 hover:translate-y-10 duration-150  p-4 border-[#CD5FF8] rounded-full w-80 h-80"
-					>
-						<img
-							className="rounded-full h-full object-cover  w-full"
-							src={profile[0]?.images[0]}
-							alt=""
-						/>
-					</div>
-				</div>
-			</div>
-
-
-
-
-
-
-
-		</div>
-	);
+      </div>
+    </div>
+  );
 };
 
 export default Banner;
