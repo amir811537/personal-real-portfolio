@@ -2,9 +2,18 @@ import aboutPhoto from '../assets/profileimage/about me.png';
 
 const AboutMe = () => {
   const skills = [
-    "Financial Management", "Investment Analysis", "Risk Management",
-    "Banking Services", "Business Strategy", "Accounting",
-  ];
+  "Financial Modeling",
+  "Investment Analysis",
+  "Corporate Finance",
+  "Risk Analysis",
+  "Credit Analysis",
+  "Financial Reporting",
+  "Accounting",
+  "Market Research",
+  "MS Excel",
+  "SPSS",
+];
+  
 
   return (
     <div id="About" className="min-h-screen flex items-center justify-center px-6">
@@ -70,7 +79,7 @@ const AboutMe = () => {
 
             
             <a
-              href="https://drive.google.com/uc?export=download&id=YOUR_CV_ID"
+              href="https://drive.google.com/uc?export=download&id=1Vm18tH_e6GllASgAzpguJzbgKEA2yhnn"
               target="_blank"
               rel="noreferrer"
               className="mt-1 w-fit"
@@ -94,11 +103,11 @@ const AboutMe = () => {
               data-aos="zoom-in"
               className="border-[5px] border-[#CD5FF8] rounded-full p-1.5 w-52 h-52 md:w-[270px] md:h-[270px] hover:-translate-y-3 transition-transform duration-300"
             >
-              <img
-                className="rounded-full h-full w-full object-cover"
-                src={aboutPhoto}
-                alt="Amir Hossain"
-              />
+    <img
+  className="rounded-full h-full w-full object-cover object-top"
+  src={aboutPhoto}
+  alt="Amir Hossain"
+/>
             </div>
 
             {/* Bottom-left card */}

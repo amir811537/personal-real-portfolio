@@ -33,7 +33,7 @@ const Banner = () => {
             className="text-2xl md:text-4xl font-bold text-[#CD5FF8] block min-h-[2.5rem]"
           />
 
-       <p className="text-white/70 leading-relaxed text-base max-w-lg mx-auto md:mx-0">
+       <p className="text-white/70  text-base  text-start  mx-4 lg:mx-0 font-semibold text-white/72 leading-relaxed text-[0.97rem]">
   I&apos;m a Finance & Banking graduate and MERN Stack Developer passionate about
   building modern web applications and exploring innovative FinTech solutions.
   I combine analytical financial knowledge with software development skills to
@@ -41,9 +41,14 @@ const Banner = () => {
   financial challenges.
 </p>
 
+
+
+
+
+
           <div className="mt-2">
             <a
-              href="https://drive.google.com/uc?export=download&id=165tJ1I6Q8iZz6EwA93FxFdsIYFG6s6cX"
+              href="https://drive.google.com/uc?export=download&id=1Vm18tH_e6GllASgAzpguJzbgKEA2yhnn"
               target="_blank"
               rel="noreferrer"
             >
